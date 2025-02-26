@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amsoft.shopping.core.factory.BookFactoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-06-02T12:52:33" hostname="alex-pumnea-mba.local" time="0.091">
+  <properties/>
+  <testcase name="createBook_ShouldCreateBookWithAllAttributes()" classname="com.amsoft.shopping.core.factory.BookFactoryTest" time="0.091"/>
+  <testcase name="createProduct_ShouldCreateBookWithGivenAttributes()" classname="com.amsoft.shopping.core.factory.BookFactoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

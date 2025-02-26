@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-06-02T12:52:34" hostname="alex-pumnea-mba.local" time="0.02">
+  <properties/>
+  <testcase name="shouldReturnZeroIfCartIsEmpty()" classname="com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImplTest" time="0.002"/>
+  <testcase name="shouldRemoveFromCartOneItem()" classname="com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImplTest" time="0.013"/>
+  <testcase name="shouldCalculateTotalPriceOfFiveItemsInCart()" classname="com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImplTest" time="0.001"/>
+  <testcase name="shouldNotAddToCartIfNotEnoughItemsAreAvailable()" classname="com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImplTest" time="0.001"/>
+  <testcase name="shouldAddToCartIfEnoughItemsAreAvailable()" classname="com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImplTest" time="0.001"/>
+  <testcase name="shouldAddOneProductToCart()" classname="com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImplTest" time="0.001"/>
+  <system-out><![CDATA[15:52:34.485 [Test worker] ERROR com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImpl -- Not enough items. Only: Optional.empty available
+15:52:34.495 [Test worker] INFO com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImpl -- Item removed successfully: Book - name='Java in Action', price=20.0, author='Joshua Block', category='IT'
+15:52:34.496 [Test worker] INFO com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImpl -- Item added successfully: Book - name='Java in Action', price=20.0, author='Joshua Block', category='IT'
+15:52:34.496 [Test worker] INFO com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImpl -- Item added successfully: Electronics - name ='Phone', price=1000.0', brand='Samsung', model='Galaxy'
+15:52:34.497 [Test worker] ERROR com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImpl -- Not enough items. Only: Optional[3.0] available
+15:52:34.498 [Test worker] INFO com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImpl -- Item added successfully: Book - name='Java in Action', price=20.0, author='Joshua Block', category='IT'
+15:52:34.499 [Test worker] INFO com.amsoft.shopping.infrastructure.service.ShoppingCartServiceImpl -- Item added successfully: Book - name='Java in Action', price=20.0, author='Joshua Block', category='IT'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
