@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:13-alpine
+    container_name: tourist-sheet-db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=touristsheet
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - db:/data/postgres
+volumes:
+    db:

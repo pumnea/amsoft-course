@@ -1,0 +1,112 @@
+### Get All TouristSheets
+GET http://localhost:8080/api/v1/tourist-sheets
+
+### Get TouristSheet by ID
+GET http://localhost:8080/api/v1/tourist-sheets/7
+
+### Get TouristSheet by non existing Id
+GET http://localhost:8080/api/v1/customers/101
+
+### Create new valid TouristSheet
+POST http://localhost:8080/api/v1/tourist-sheets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 7
+  },
+  "destination": "Paris",
+  "travelStartDate": "2023-08-01",
+  "travelEndDate": "2023-08-15",
+  "flightDetails": "Flight ABC123",
+  "tourPlan": [
+    "Place 1",
+    "Place 2",
+    "Place 3"
+  ]
+}
+
+
+### Create another new valid TouristSheet
+POST http://localhost:8080/api/v1/tourist-sheets
+Content-Type: application/json
+
+{
+  "customer": {
+    "id": 6
+  },
+  "destination": "Moldova",
+  "travelStartDate": "2023-08-15",
+  "travelEndDate": "2023-08-25",
+  "flightDetails": "Flight XYZ789",
+  "tourPlan": [
+    "Place A",
+    "Place B",
+    "Place C",
+    "Place D"
+  ]
+}
+
+### Create new invalid TouristSheet
+POST http://localhost:8080/api/v1/customers
+Content-Type: application/json
+
+{
+  "travelStartDate": "2021-08-15",
+  "travelEndDate": "2021-08-25",
+  "flightDetails": "",
+  "tourPlan": [
+  ],
+  "customer": {
+    "id": 0
+  }
+}
+
+
+### Update existing Tourist Sheets with existing id
+PUT http://localhost:8080/api/v1/tourist-sheets/9
+Content-Type: application/json
+
+{
+  "travelStartDate": "2023-09-15",
+  "travelEndDate": "2023-09-25",
+  "flightDetails": "NEW Flight XYZ789",
+  "destination": "New  New Moldova",
+  "tourPlan": [
+    "NEW Place A",
+    "NEW Place B",
+    "NEW Place C",
+    "NEW Place D"
+  ],
+  "customer": {
+    "id": 6
+  }
+}
+
+### Update existing TouristSheet with non existing id
+PUT http://localhost:8080/api/v1/tourist-sheets/100
+Content-Type: application/json
+
+{
+  "travelStartDate": "2023-09-15",
+  "travelEndDate": "2023-09-25",
+  "flightDetails": "NEW Flight XYZ789",
+  "tourPlan": [
+    "NEW Place A",
+    "NEW Place B",
+    "NEW Place C",
+    "NEW Place D"
+  ],
+  "customer": {
+    "id": 200
+  }
+}
+
+### Delete TouristSheet by existing id
+DELETE http://localhost:8080/api/v1/tourist-sheets/1
+
+### Delete TouristSheet by non existing id
+DELETE http://localhost:8080/api/v1/tourist-sheets/100
+
+### Delete All TouristSheets
+DELETE http://localhost:8080/api/v1/tourist-sheets
